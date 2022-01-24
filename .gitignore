@@ -1,0 +1,42 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# IDE
+.idea
+
+# linting
+.eslintcache
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+/src/graphql/schema.json
+/src/graphql/schema.json.graphql
+
+
+# ops
+.terraform
+terraform.tfstate.d
+
+# misc
+.DS_Store
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+nova/bundle.js
+nova/bundle.js.map
+bundle-*.js
+
+# npm
+.npmrc
