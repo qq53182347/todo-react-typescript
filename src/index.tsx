@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { TodoItem } from "./components/types"
 import todoListJson from './mocks/todo-list-json.json';
-
+import './index.css';
 const DATA: TodoItem[] = todoListJson;
 
 ReactDOM.render(

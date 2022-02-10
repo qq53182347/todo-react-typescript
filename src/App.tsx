@@ -4,7 +4,7 @@ import { TaskForm } from "./components/TaskForm";
 import { TodoButtons } from "./components/TodoButtons";
 import { TodoItem } from "./components/types"
 
-interface Props {
+interface Tasks {
     tasks: TodoItem[];
 }
 
@@ -12,9 +12,9 @@ type filterOptions = {
     [key: string]: any
 }
 
-export const App: FunctionComponent<Props> = (props) => {
+export const App: FunctionComponent<Tasks> = (todoItems) => {
 
-    const [tasks, setTasks] = useState<TodoItem[]>(props.tasks);
+    const [tasks, setTasks] = useState<TodoItem[]>(todoItems.tasks);
     const [filter, setFilter] = useState<string>("All");
 
     const filterMap: filterOptions = {
@@ -49,13 +49,13 @@ export const App: FunctionComponent<Props> = (props) => {
     };
 
     return (
-        <>
+        <div  className="todoapp stack-large">
             <TaskForm addTask={addTask} />
             <TodoButtons filterNames = {filterNames} setFilter = {setFilter}/>
             <TodoTaskList tasks={tasks} filterMap={filterMap} filter={filter}
                           toggleTaskCompleted={toggleTaskCompleted} editTask={editTask}
                           deleteTask={deleteTask}/>
-        </>
+        </div>
     );
 }
 

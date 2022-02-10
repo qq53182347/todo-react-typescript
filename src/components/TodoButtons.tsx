@@ -7,14 +7,14 @@ interface Props {
 
 export const TodoButtons: FunctionComponent<Props> = (props) => {
     const filterList = props.filterNames.map(name => (
-        <button type="button"  onClick={() => props.setFilter(name)}>
-            <span>Show </span>
+        <button type="button"  className="btn toggle-btn"  onClick={() => props.setFilter(name)}>
+            <span className="visually-hidden">Show </span>
             <span>{name}</span>
-            <span> tasks</span>
+            <span className="visually-hidden"> tasks</span>
         </button>
     ));
 
     return (
-        <>{filterList}</>
+        <div  className="filters btn-group stack-exception">{filterList}</div>
     );
 }

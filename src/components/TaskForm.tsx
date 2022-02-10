@@ -1,10 +1,10 @@
 import { ChangeEvent, FunctionComponent, useState } from "react";
 
-interface Props {
+interface Tasks {
     addTask: (name: string) => void
 }
 
-export const TaskForm: FunctionComponent<Props> = (props) => {
+export const TaskForm: FunctionComponent<Tasks> = (tasks) => {
 
     const [name, setName] = useState<string>("");
 
@@ -14,15 +14,15 @@ export const TaskForm: FunctionComponent<Props> = (props) => {
 
     let handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        props.addTask(name);
+        tasks.addTask(name);
         setName("");
     };
 
     return (
         <form onSubmit={handleSubmit} >
-            <h1>TodoMatic</h1>
+            <h1 className="label-wrapper">TodoMatic</h1>
             <h2>
-                <label>
+                <label className="label__lg">
                     What needs to be done?
                 </label>
             </h2>
@@ -30,9 +30,10 @@ export const TaskForm: FunctionComponent<Props> = (props) => {
                 type="text"
                 name="text"
                 value={name}
+                className="input input__lg"
                 onChange={handleChange}
             />
-            <button type="submit">
+            <button type="submit" className="btn btn__primary btn__lg">
                 Add
             </button>
         </form >
