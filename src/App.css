@@ -1,0 +1,22 @@
+#main_app{
+  width: 500px;
+  background-color: white;
+  margin: 16px 20px;
+  padding: 12px 20px;
+  box-shadow: 1px 0px 6px 2px rgb(110, 108, 108);
+}
+
+.todo-holder{
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.todo-holder > legend {
+  color: rgb(1, 1, 5);
+  font-size: 22px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0px;
+}
+
+.todo-holder >legend h4{
+  margin: 0px;
+}

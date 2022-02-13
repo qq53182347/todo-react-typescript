@@ -1,0 +1,69 @@
+.todo{
+    background-color: #ddc;
+    padding: 9px;
+    margin: 9px;
+    border-radius: 10px;
+    text-align: justify;
+}
+.todo-obj{
+    display: flex;
+    justify-content: left;
+    margin: 10px 23px;
+}
+.actions{
+    margin: 5px;
+    display: flex;
+    justify-content: right;
+}
+.actions button{
+    font-size: 18px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 18px;
+    border-radius: 3px;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+.actions button:hover{
+    transform: scale(1.1);
+}
+
+.edit-input{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 18px;
+}
+
+.edit{
+    background-color: #8f9908;
+}
+
+.delete{
+    background-color : #f1010d;
+}
+
+.cancel{
+    background-color: rgb(38, 7, 122);
+}
+
+.save{
+    background-color: rgb(10, 104, 10);
+}
+.completed{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: none;
+}
+
+.todo-name{
+    font-size: 20px;
+    margin-left: 12px;
+}
